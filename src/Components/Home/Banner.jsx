@@ -7,7 +7,7 @@ const Banner = () => {
         {/* container  */}
       </div>
       <div className="container mx-auto">
-        <div className="flex  flex-col lg:flex-row h-full  mx-auto items-center lg:gap-40 absolute top-0 p-10">
+        <div className="flex  flex-col lg:flex-row h-full  mx-auto items-center lg:gap-40 absolute top-0 p-10 lg:p-0">
           <div className="h-full flex flex-col justify-center lg:w-[55%] gap-8">
             <h1 className="text-3xl lg:text-5xl text-white font-bold">
               Revolutionize Your <br /> Restaurant Experience: <br />

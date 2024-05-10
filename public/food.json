@@ -1,0 +1,123 @@
+[
+    {
+      "foodName": "Spaghetti Carbonara",
+      "foodImage": "https://png.pngtree.com/png-clipart/20231020/original/pngtree-pasta-carbonara-italian-food-png-image_13384725.png",
+      "foodCategory": "Pasta",
+      "price": "$12.99",
+      "madeBy": "Chef Giovanni",
+      "foodOrigin": "Italy",
+      "description": "A classic Italian pasta dish made with spaghetti, eggs, Parmesan cheese, pancetta, and black pepper. Creamy, rich, and flavorful, it's a favorite comfort food enjoyed around the world.",
+      "purchaseButton": "Add to Cart"
+    },
+    {
+      "foodName": "Sushi Platter",
+      "foodImage": "https://static.vecteezy.com/system/resources/previews/027/735/633/original/sushi-platter-with-different-types-of-sushi-free-png.png",
+      "foodCategory": "Japanese Cuisine",
+      "price": "$24.99",
+      "madeBy": "Sushi Chef Hiro",
+      "foodOrigin": "Japan",
+      "description": "An assortment of fresh sushi rolls and sashimi, expertly crafted with the finest ingredients. Perfect for sushi lovers looking for a variety of flavors and textures.",
+      "purchaseButton": "Order Now"
+    },
+    {
+      "foodName": "Chicken Tikka Masala",
+      "foodImage": "https://i.ibb.co/4JVShMV/file.png",
+      "foodCategory": "Indian Cuisine",
+      "price": "$15.99",
+      "madeBy": "Chef Raj",
+      "foodOrigin": "India",
+      "description": "Tender pieces of marinated chicken cooked in a rich, creamy tomato-based sauce, infused with Indian spices and served with fragrant basmati rice. A beloved dish with bold flavors.",
+      "purchaseButton": "Buy Now"
+    },
+    {
+      "foodName": "Caprese Salad",
+      "foodImage": "https://png.pngtree.com/png-clipart/20240103/original/pngtree-xmas-caprese-salad-served-in-plate-as-christmas-tree-for-festive-png-image_14007117.png",
+      "foodCategory": "Salad",
+      "price": "$9.99",
+      "madeBy": "Chef Maria",
+      "foodOrigin": "Italy",
+      "description": "A refreshing salad made with ripe tomatoes, fresh mozzarella cheese, basil leaves, extra virgin olive oil, and balsamic glaze. Simple yet delicious, it's a perfect appetizer or side dish.",
+      "purchaseButton": "Add to Basket"
+    },
+    {
+      "foodName": "Beef Burger",
+      "foodImage": "https://amarpuregold.com/wp-content/uploads/2021/10/7-min.png",
+      "foodCategory": "Burgers",
+      "price": "$8.99",
+      "madeBy": "Chef Mike",
+      "foodOrigin": "United States",
+      "description": "A juicy beef patty grilled to perfection and served on a toasted bun with lettuce, tomato, onion, pickles, and your choice of toppings. A classic American favorite that never disappoints.",
+      "purchaseButton": "Order Online"
+    },
+    {
+      "foodName": "Chocolate Lava Cake",
+      "foodImage": "https://i.ibb.co/L9Zk4YP/file-1.png",
+      "foodCategory": "Dessert",
+      "price": "$6.99",
+      "madeBy": "Pastry Chef Lisa",
+      "foodOrigin": "France",
+      "description": "A decadent chocolate cake with a gooey molten chocolate center, served warm and topped with a scoop of vanilla ice cream. A heavenly dessert for chocolate lovers.",
+      "purchaseButton": "Add to Cart"
+    },
+    {
+        "foodName": "Margherita Pizza",
+        "foodImage": "https://png.pngtree.com/png-clipart/20231111/original/pngtree-a-tempting-slice-of-margherita-heaven-pizza-on-white-plate-png-image_13534936.png",
+        "foodCategory": "Pizza",
+        "price": "$10.99",
+        "madeBy": "Chef Luigi",
+        "foodOrigin": "Italy",
+        "description": "A classic Italian pizza topped with San Marzano tomatoes, fresh mozzarella cheese, basil leaves, and a drizzle of olive oil. Simple yet bursting with flavor, it's a crowd-pleaser for pizza lovers.",
+        "purchaseButton": "Add to Cart"
+      },
+      {
+        "foodName": "Grilled Salmon",
+        "foodImage": "https://static.vecteezy.com/system/resources/previews/023/858/839/non_2x/ai-generative-appetizing-grilled-salmon-steak-with-a-side-dish-of-yellow-puree-fresh-asparagus-broccoli-and-cauliflower-on-a-transparent-background-free-png.png",
+        "foodCategory": "Seafood",
+        "price": "$18.99",
+        "madeBy": "Chef Alejandro",
+        "foodOrigin": "Norway",
+        "description": "Fresh Atlantic salmon fillet seasoned with herbs and grilled to perfection, served with a side of seasonal vegetables and lemon-dill sauce. A healthy and delicious choice for seafood enthusiasts.",
+        "purchaseButton": "Order Now"
+      },
+      {
+        "foodName": "Caesar Salad",
+        "foodImage": "https://i.ibb.co/xFSzCY7/pngegg.png",
+        "foodCategory": "Salad",
+        "price": "$7.99",
+        "madeBy": "Chef Emily",
+        "foodOrigin": "United States",
+        "description": "A classic Caesar salad made with crisp romaine lettuce, garlic croutons, Parmesan cheese, and tangy Caesar dressing. Simple, fresh, and packed with flavor, it's a timeless favorite.",
+        "purchaseButton": "Buy Now"
+      },
+      {
+        "foodName": "Beef Tenderloin Steak",
+        "foodImage": "https://tienda.bodegaelcapricho.com/449-large_default/ox-fillet-medallions.jpg",
+        "foodCategory": "Steak",
+        "price": "$29.99",
+        "madeBy": "Chef Carlos",
+        "foodOrigin": "United States",
+        "description": "A premium cut of beef tenderloin seasoned with herbs and grilled to your preferred doneness, served with garlic mashed potatoes and sautéed vegetables. Indulge in the ultimate steak experience.",
+        "purchaseButton": "Add to Basket"
+      },
+      {
+        "foodName": "Tiramisu",
+        "foodImage": "https://static.vecteezy.com/system/resources/previews/036/497/875/original/ai-generated-tiramisu-dessert-on-a-white-plate-on-transparent-background-png.png",
+        "foodCategory": "Dessert",
+        "price": "$8.99",
+        "madeBy": "Pastry Chef Sophia",
+        "foodOrigin": "Italy",
+        "description": "A classic Italian dessert made with layers of coffee-soaked ladyfingers, mascarpone cheese, and cocoa powder. Creamy, decadent, and irresistibly delicious, it's the perfect finale to any meal.",
+        "purchaseButton": "Order Online"
+      },
+      {
+        "foodName": "Chicken Alfredo Pasta",
+        "foodImage": "https://static.vecteezy.com/system/resources/previews/036/498/054/non_2x/ai-generated-creamy-chicken-alfredo-pasta-bow-on-transparent-background-free-png.png",
+        "foodCategory": "Pasta",
+        "price": "$14.99",
+        "madeBy": "Chef Isabella",
+        "foodOrigin": "Italy",
+        "description": "Fettuccine pasta tossed in a creamy Alfredo sauce with tender pieces of grilled chicken, garlic, and Parmesan cheese. Rich, creamy, and satisfying, it's a comfort food classic that never fails to please.",
+        "purchaseButton": "Add to Cart"
+      }
+  ]
+  
