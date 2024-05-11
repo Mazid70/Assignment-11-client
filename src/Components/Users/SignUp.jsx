@@ -1,9 +1,8 @@
-import { FcGoogle } from "react-icons/fc";
-import { FaGithub, FaFacebook } from "react-icons/fa";
+
 import { BsFillEyeFill, BsFillEyeSlashFill } from "react-icons/bs";
 import { useState } from "react";
 import { Link } from "react-router-dom";
-const SignIn = () => {
+const SignUp = () => {
   const [visible, setVisible] = useState(true);
   const togglePassword = () => {
     setVisible(!visible);
@@ -20,20 +19,42 @@ const SignIn = () => {
           />
         </div>
         <div className="bg-[#191919] w-[30%] p-10 rounded-lg">
-          <h1 className="font-bold text-3xl text-center mb-5">Sign In</h1>
+          <h1 className="font-bold text-3xl text-center mb-5">Sign Up</h1>
           <form>
-            <label htmlFor="email">Email</label>
+            <label htmlFor="name">Name</label>
             <input
               type="text"
+              name="name"
+              className="h-12 w-full pl-5 rounded-lg mt-2 mb-3 text-black"
+              placeholder="Enter Your Name "
+            />
+            <label htmlFor="email">Email</label>
+            <input
+              type="email"
               name="email"
               className="h-12 w-full pl-5 rounded-lg mt-2 mb-3 text-black"
               placeholder="Enter Your Email "
             />
+            
+            <label htmlFor="photo">Photo URL</label>
+            <input
+              type="link"
+              name="photo"
+              className="h-12 w-full pl-5 rounded-lg mt-2 mb-3 text-black"
+              placeholder="Enter Your Photo URL "
+            />
+            <label htmlFor="phone">Phone Number</label>
+            <input
+              type="number"
+              name="phone"
+              className="h-12 w-full pl-5 rounded-lg mt-2 mb-3 text-black"
+              placeholder="Enter Your Phone Number "
+            />
             <div className="relative">
-              <label htmlFor="email">Password</label>
+              <label htmlFor="password">Password</label>
               <input
                 type={visible ? "password" : "text"}
-                name="email"
+                name="password"
                 className="h-12 w-full pl-5 rounded-lg mt-2  text-black"
                 placeholder="Enter Your Password "
               />
@@ -50,30 +71,23 @@ const SignIn = () => {
               )}
             </div>
 
-            <h1 className="text-right">Forget Password</h1>
             <input
               type="Submit"
-              value="Sign In"
-              className="h-12 w-full pl-5 rounded-lg bg-red-500 mt-2 mb-3"
+              value="Sign Up"
+              className="h-12 w-full pl-5 rounded-lg bg-red-500 mt-4 mb-3"
             />
           </form>
-          <h1 className="text-center">Or Sign In with</h1>
-          <div className="flex justify-center gap-3 mt-5">
-            <div className="bg-white text-2xl px-10 py-2 rounded-full">
-              <FcGoogle />
-            </div>
-            <div className="bg-white text-2xl px-10 py-2 rounded-full">
-              <FaGithub className="text-black" />
-            </div>
-            <div className="bg-white text-2xl px-10 py-2 rounded-full">
-              <FaFacebook className="bg-white text-blue-500" />
-            </div>
-          </div>
-          <h1 className="text-center mt-5">Do not have an account yet? <Link to='/signup' ><span className="font-bold hover:text-blue-500 hover:underline cursor-pointer">SignUp</span> </Link>for free</h1>
+         
+        <h3 className="mt-5 text-center">
+          Already have an account?{" "}
+          <Link className="font-semibold hover:text-blue-500 hover:underline" to="/signin">
+            Sign In
+          </Link>
+        </h3>
         </div>
       </div>
     </section>
   );
 };
 
-export default SignIn;
+export default SignUp;
