@@ -56,45 +56,6 @@ const NavBar = () => {
           Gallery
         </NavLink>
       </li>
-
-      {!user ? (
-        <li>
-          <NavLink
-            to="/signin"
-            style={({ isActive }) => {
-              return {
-                fontWeight: isActive ? "bold" : "bold",
-                color: isActive ? "#E04444" : "#fff",
-                background: isActive ? "transparent" : "",
-                paddingBottom: "5px",
-                borderBottom: isActive ? "#E04444 2px solid" : "",
-                fontSize: "1.2rem",
-              };
-            }}
-          >
-            Sign In
-          </NavLink>
-        </li>
-      ) : (
-        <li>
-          {" "}
-          <NavLink
-            to={`spot/${user.email}`}
-            style={({ isActive }) => {
-              return {
-                fontWeight: isActive ? "bold" : "bold",
-                color: isActive ? "#E04444" : "#fff",
-                background: isActive ? "transparent" : "",
-                paddingBottom: "5px",
-                borderBottom: isActive ? "#E04444 2px solid" : "",
-                fontSize: "1.2rem",
-              };
-            }}
-          >
-            Sign Out
-          </NavLink>
-        </li>
-      )}
     </>
   );
 
@@ -137,11 +98,16 @@ const NavBar = () => {
         <div className="navbar-end ">
           <div className="relative">
             <div className="bg-gray-300 h-10 w-32 rounded-full  opacity-25 "></div>
-          {user?"":<div className="flex  text-white items-center gap-3 font-bold text-lg absolute top-1 left-3">
-<MdLogin /> Sign In
-        </div>}
+            {user ? (
+              ""
+            ) : (
+              <NavLink to="/signin">
+                <div className="flex  text-white items-center gap-3 font-bold text-lg absolute top-1 left-3">
+                  <MdLogin /> Sign In
+                </div>
+              </NavLink>
+            )}
           </div>
-         
         </div>
       </div>
     </nav>
