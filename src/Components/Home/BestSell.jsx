@@ -7,8 +7,8 @@ const BestSell = () => {
         fetch('./food.json')
         .then(res=>res.json())
         .then(data=>setFoods(data))
-        console.log(foods)
-    },[foods])
+        
+    },[])
   return (
     <section className="container mx-auto text-white mt-52 md:mt-10 lg:mt-0">
       <h1 className="text-3xl lg:text-5xl  font-bold mb-5">
