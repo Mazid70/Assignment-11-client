@@ -7,6 +7,7 @@ import Home from "./Components/Home/Home.jsx";
 import SignIn from "./Components/Users/SignIn.jsx";
 import SignUp from "./Components/Users/SignUp.jsx";
 import AuthProvider from "./Provider/AuthProvider.jsx";
+import Details from "./Components/Home/Details.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -23,6 +24,11 @@ const router = createBrowserRouter([
       {
         path: "/signup",
         element: <SignUp></SignUp>,
+      },
+      {
+        path: "/details/:id",
+        element: <Details></Details>,
+        loader:({params})=>fetch(`http://localhost:1000/home/${params.id}`)
       },
     ],
   },
