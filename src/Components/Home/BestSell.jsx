@@ -23,7 +23,7 @@ const BestSell = () => {
         carefully crafted by our talented chefs.
       </p>
       <div className="grid grid-cols-2  md:grid-cols-3 lg:grid-cols-6 gap-2 lg:gap-5 mt-10">
-        {foods.map(food=><FoodCard key={food.id} food={food}></FoodCard>)}
+        {foods.map(food=><FoodCard key={food._id} food={food}></FoodCard>)}
       </div>
     </section>
   );
