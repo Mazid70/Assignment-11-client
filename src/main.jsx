@@ -9,6 +9,7 @@ import SignUp from "./Components/Users/SignUp.jsx";
 import AuthProvider from "./Provider/AuthProvider.jsx";
 import Details from "./Components/Home/Details.jsx";
 import AllFoods from "./Components/Pages/AllFoods.jsx";
+import Gallery from "./Components/Pages/Gallery.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: "/all",
         element: <AllFoods></AllFoods>,
+      },
+      {
+        path: "/gallery",
+        element: <Gallery></Gallery>,
       },
       {
         path: "/details/:id",

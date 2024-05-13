@@ -45,7 +45,7 @@ const NavBar = () => {
       </li>
       <li>
         <NavLink
-          to="/add"
+          to="/gallery"
           style={({ isActive }) => {
             return {
               fontWeight: isActive ? "bold" : "bold",
