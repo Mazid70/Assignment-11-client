@@ -36,8 +36,12 @@ const Gallery = () => {
 
   return (
     <div className="bg-black py-20 min-h-[100vh]">
+
       <div className="container mx-auto">
-        <div className="grid  gap-5 md:grid-cols-3 lg:grid-cols-4 ">
+      <h1 className="text-3xl lg:text-5xl text-white text-center font-bold mb-5 " data-aos="fade-down" data-aos-duration="500">
+        Foods <span className="text-red-500">Gallery</span>
+      </h1>
+        <div className="grid  gap-5 md:grid-cols-3 lg:grid-cols-4 " data-aos="zoom-in" data-aos-delay="500">
           {galleryData.map((e) => (
             <div key={e._id}>
               <div className="relative  ">
