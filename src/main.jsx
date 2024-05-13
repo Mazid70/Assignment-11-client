@@ -10,6 +10,7 @@ import AuthProvider from "./Provider/AuthProvider.jsx";
 import Details from "./Components/Home/Details.jsx";
 import AllFoods from "./Components/Pages/AllFoods.jsx";
 import Gallery from "./Components/Pages/Gallery.jsx";
+import BuyFood from "./Components/Pages/BuyFood.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -34,10 +35,16 @@ const router = createBrowserRouter([
       {
         path: "/gallery",
         element: <Gallery></Gallery>,
+        loader:()=>fetch('http://localhost:1000/gallery')
       },
       {
         path: "/details/:id",
         element: <Details></Details>,
+        loader:({params})=>fetch(`http://localhost:1000/home/${params.id}`)
+      },
+      {
+        path: "/buy/:id",
+        element: <BuyFood></BuyFood>,
         loader:({params})=>fetch(`http://localhost:1000/home/${params.id}`)
       },
     ],

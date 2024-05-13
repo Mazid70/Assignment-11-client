@@ -1,8 +1,9 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 const Details = () => {
   const food = useLoaderData();
   const {
+    _id,
     foodName,
     foodImage,
     foodCategory,
@@ -10,6 +11,7 @@ const Details = () => {
     madeBy,
     foodOrigin,
     description,
+    quantity
   } = food;
   return (
     <section className="flex h-[100vh] justify-center items-center bg-black text-white">
@@ -29,12 +31,13 @@ const Details = () => {
           <h1 className="text-3xl font-bold">{foodName}</h1>
           <h1 className=" font-bold text-gray-300">{foodCategory}</h1>
           <p className="text-sm text-gray-300 w-[300px] mt-5">{description}</p>
+          <h1 className="text-xl font-semibold mt-2">Quantity: {quantity}</h1>
           <h1 className="font-bold text-3xl text-red-500 mt-5">{price}</h1>
 
           <h1 className="font-semibold text-lg">Food Origin: {foodOrigin}</h1>
-          <button className="bg-red-500 text-lg font-semibold px-5 py-2 rounded-xl mt-5">
+         <Link to={`/buy/${_id}`} ><button className="bg-red-500 text-lg font-semibold px-5 py-2 rounded-xl mt-5">
             Buy Now{" "}
-          </button>
+          </button></Link>
         </div>
       </div>
     </section>
