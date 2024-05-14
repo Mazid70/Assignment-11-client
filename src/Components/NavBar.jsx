@@ -162,7 +162,11 @@ const NavBar = () => {
                     {user?.phoneNumber}
                   </h1>
                 </li>
+                <li className="self-start font-semibold mt-5 hover:text-red-500 "><NavLink to={`/myorder/user/${user.email}`}>My ordered food items</NavLink></li>   
               </ul>
+           
+            
+            
             </div>
             </div>:""}
           </div>

@@ -7,7 +7,7 @@ import { MdOutlineProductionQuantityLimits, MdEmail } from "react-icons/md";
 import { FaUser, FaClock } from "react-icons/fa";
 const BuyFood = () => {
   const food = useLoaderData();
-  const { foodName, price,_id } = food;
+  const { foodName, price,foodImage,madeBy } = food;
   const { user } = useContext(AuthContext);
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -32,7 +32,7 @@ const BuyFood = () => {
       return alert(`only available${food.quantity}`);
     }
 
-const purchaseData={foodName,price,quantity,buyerName,buyerEmail,buyingDate}
+const purchaseData={foodName,price,quantity,buyerName,buyerEmail,buyingDate,foodImage,madeBy}
 
 
   //   const quantity=parseInt(food.quantity-Fromquantity)

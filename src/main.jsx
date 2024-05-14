@@ -11,6 +11,7 @@ import Details from "./Components/Home/Details.jsx";
 import AllFoods from "./Components/Pages/AllFoods.jsx";
 import Gallery from "./Components/Pages/Gallery.jsx";
 import BuyFood from "./Components/Pages/BuyFood.jsx";
+import OrderFood from "./Components/Pages/OrderFood.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -31,6 +32,11 @@ const router = createBrowserRouter([
       {
         path: "/all",
         element: <AllFoods></AllFoods>,
+      },
+      {
+        path: "/myorder/user/:email",
+        element: <OrderFood></OrderFood>,
+        loader:({params})=>fetch(`http://localhost:1000/buy/${params.email}`)
       },
       {
         path: "/gallery",
