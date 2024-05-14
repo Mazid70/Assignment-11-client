@@ -12,6 +12,8 @@ import AllFoods from "./Components/Pages/AllFoods.jsx";
 import Gallery from "./Components/Pages/Gallery.jsx";
 import BuyFood from "./Components/Pages/BuyFood.jsx";
 import OrderFood from "./Components/Pages/OrderFood.jsx";
+import UserAddFood from "./Components/Pages/UserAddFood.jsx";
+import UserFoodShocase from "./Components/Pages/UserFoodShocase.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -32,6 +34,15 @@ const router = createBrowserRouter([
       {
         path: "/all",
         element: <AllFoods></AllFoods>,
+      },
+      {
+        path: "/addfood",
+        element: <UserAddFood></UserAddFood>,
+      },
+      {
+        path: "/myfood/user/:email",
+        element: <UserFoodShocase></UserFoodShocase>,
+        loader:({params})=>fetch(`http://localhost:1000/userfood/${params.email}`)
       },
       {
         path: "/myorder/user/:email",

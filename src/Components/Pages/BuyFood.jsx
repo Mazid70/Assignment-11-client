@@ -1,26 +1,24 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { useLoaderData } from "react-router-dom";
 import { RiMoneyDollarCircleFill } from "react-icons/ri";
 import { IoFastFood } from "react-icons/io5";
 import { MdOutlineProductionQuantityLimits, MdEmail } from "react-icons/md";
 import { FaUser, FaClock } from "react-icons/fa";
+import Swal from "sweetalert2";
 const BuyFood = () => {
   const food = useLoaderData();
-  const { foodName, price,foodImage,madeBy } = food;
+  const { foodName, price, foodImage, madeBy } = food;
   const { user } = useContext(AuthContext);
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
     const quantity = parseInt(form.quantity.value);
-    const foodName =form.foodName.value
-    const price =form.price.value
-    const buyerName =form.buyerName.value
-    const buyerEmail =form.buyerEmail.value
-    const buyingDate =form.buyingDate.value
-
-
-
+    const foodName = form.foodName.value;
+    const price = form.price.value;
+    const buyerName = form.buyerName.value;
+    const buyerEmail = form.buyerEmail.value;
+    const buyingDate = form.buyingDate.value;
 
     if (food.quantity === 0) {
       return alert("no available");
@@ -32,22 +30,35 @@ const BuyFood = () => {
       return alert(`only available${food.quantity}`);
     }
 
-const purchaseData={foodName,price,quantity,buyerName,buyerEmail,buyingDate,foodImage,madeBy}
+    const purchaseData = {
+      foodName,
+      price,
+      quantity,
+      buyerName,
+      buyerEmail,
+      buyingDate,
+      foodImage,
+      madeBy,
+    };
 
-
-  //   const quantity=parseInt(food.quantity-Fromquantity)
-  //  const updatedQuantity={quantity}
-  //  console.log(updatedQuantity)
-    fetch(
-        `http://localhost:1000/buy`,
-        {
-          method: "POST",
-          headers: {
-            "content-type": "application/json",
-          },
-          body: JSON.stringify(purchaseData),
-        }
-      ).then(res=>res.json())
+    //   const quantity=parseInt(food.quantity-Fromquantity)
+    //  const updatedQuantity={quantity}
+    //  console.log(updatedQuantity)
+    fetch(`http://localhost:1000/buy`, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(purchaseData),
+    })
+      .then((res) => res.json())
+      .then(() => {
+        Swal.fire({
+          title: "Good job!",
+          text: "Food Added Successfully ",
+          icon: "success",
+        });
+      });
   };
   return (
     <div className="bg-black flex justify-center h-[100vh] items-center w-full">
