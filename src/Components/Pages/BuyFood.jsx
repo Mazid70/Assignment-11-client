@@ -12,27 +12,40 @@ const BuyFood = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
-    const Fromquantity = parseInt(form.quantity.value);
+    const quantity = parseInt(form.quantity.value);
+    const foodName =form.foodName.value
+    const price =form.price.value
+    const buyerName =form.buyerName.value
+    const buyerEmail =form.buyerEmail.value
+    const buyingDate =form.buyingDate.value
+
+
+
+
     if (food.quantity === 0) {
       return alert("no available");
     }
-    if (Fromquantity < 1) {
+    if (quantity < 1) {
       return alert("addminimum 1");
     }
-    if (Fromquantity > food.quantity) {
-      return alert(`only available${quantity}`);
+    if (quantity > food.quantity) {
+      return alert(`only available${food.quantity}`);
     }
-    const quantity=parseInt(food.quantity-Fromquantity)
-   const updatedQuantity={quantity}
-   console.log(updatedQuantity)
+
+const purchaseData={foodName,price,quantity,buyerName,buyerEmail,buyingDate}
+
+
+  //   const quantity=parseInt(food.quantity-Fromquantity)
+  //  const updatedQuantity={quantity}
+  //  console.log(updatedQuantity)
     fetch(
-        `http://localhost:1000/home/${_id}`,
+        `http://localhost:1000/buy`,
         {
-          method: "PUT",
+          method: "POST",
           headers: {
             "content-type": "application/json",
           },
-          body: JSON.stringify(updatedQuantity),
+          body: JSON.stringify(purchaseData),
         }
       ).then(res=>res.json())
   };
