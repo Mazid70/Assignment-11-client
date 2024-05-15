@@ -1,8 +1,21 @@
-# React + Vite
+TableMingle
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Experience culinary bliss with every visit
+to TableMingle. Our dedication to flavor, service,
+and ambiance ensures each moment is a delectable delight.
 
-Currently, two official plugins are available:
+live link :https://tablemingle.netlify.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Features:
+1.Userfriendly Ui,
+2.Display food user can order/add
+3.User can easily add,update,delete food 
+4.userfriendly galley page
+5.google,github,facebook sign in method
+etc .
+
+Pakages:
+1.React typewriter
+2.React Icons
+3.React lottie
+etc
