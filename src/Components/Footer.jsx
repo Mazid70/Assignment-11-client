@@ -8,7 +8,10 @@ const Footer = () => {
       <div className="border-t">
         <footer className="footer container mx-auto p-10  text-white">
           <aside>
-            
+          <div className="flex justify-center items-center gap-4">
+            <img src="logo.png" alt="logo" className="h-10 w-10" />
+            <h1 className="font-bold text-2xl text-white">TableMingle</h1>
+          </div>
             <p>
               Experience culinary bliss with every visit <br /> to TableMingle. 
               Our dedication to flavor, service, <br /> and ambiance ensures each

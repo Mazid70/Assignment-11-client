@@ -3,25 +3,25 @@ const FastestDelivery = () => {
     <section className="text-white mt-10 relative">
       <div className="h-16 w-16 rounded-full bg-gradient-to-b from-gray-950 to-gray-900 absolute top-20 left-10"></div>
       <div>
-        <h1 className="font-bold text-4xl text-center ">
+        <h1 className="font-bold text-4xl text-center " data-aos="fade-down" data-aos-delay="500">
           Fast delivery within an hours
         </h1>
-        <p className="text-center"> order before 15:00</p>
+        <p className="text-center" data-aos="fade-down" data-aos-delay="600"> order before 15:00</p>
         <div className="bg-red-500 pt-1 w-20 mx-auto mt-5"></div>
       </div>
-      <div className="flex justify-center  container mx-auto  ">
-        <div className="w-[40%] relative">
+      <div className="flex justify-center flex-col lg:flex-row  container mx-auto  ">
+        <div className="lg:w-[40%] relative">
           {/* design start  */}
 
-          <div className="rounded-full border-t-red-500 border-t-2 w-[450px]  absolute h-full -top-5 left-[95px]">
+          <div className="rounded-full hidden lg:block border-t-red-500 border-t-2 w-[450px]  absolute h-full -top-5 left-[95px]">
             {" "}
           </div>
-          <div className="rounded-full border-t-red-500 border-t-2 w-[380px] absolute h-full top-0 left-[130px]"></div>
+          <div className="rounded-full hidden lg:block border-t-red-500 border-t-2 w-[380px] absolute h-full top-0 left-[130px]"></div>
 
           {/* design end  */}
-          <img src="delivery.png" alt="delivery" className="h-full  w-full" />
+          <img src="delivery.png" alt="delivery" className="h-full  w-full" data-aos="fade-right" data-aos-delay="800" / >
         </div>
-        <div className="space-y-7 mt-12">
+        <div className="space-y-7 mt-12" data-aos="fade-left" data-aos-delay="900">
           <div className="border-b-red-500 border-b-2 pb-2">
             <h1 className="font-semibold text-xl">ON THE FIRST:</h1>
             <h1 className="text-gray-400 w-4/5 text-lg">

@@ -6,6 +6,7 @@ import { IoFastFood } from "react-icons/io5";
 import { MdOutlineProductionQuantityLimits, MdEmail } from "react-icons/md";
 import { FaUser, FaClock } from "react-icons/fa";
 import Swal from "sweetalert2";
+import axios from "axios";
 const BuyFood = () => {
   const food = useLoaderData();
   const { foodName, price, foodImage, madeBy } = food;
@@ -13,7 +14,7 @@ const BuyFood = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
-    const quantity = parseInt(form.quantity.value);
+    const foodQuantity = parseInt(form.quantity.value);
     const foodName = form.foodName.value;
     const price = form.price.value;
     const buyerName = form.buyerName.value;
@@ -21,19 +22,31 @@ const BuyFood = () => {
     const buyingDate = form.buyingDate.value;
 
     if (food.quantity === 0) {
-      return alert("no available");
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "This food is not available",
+      });
     }
-    if (quantity < 1) {
-      return alert("addminimum 1");
+    if (foodQuantity < 1) {
+      Swal.fire({
+        icon: "alert",
+        title: "Oops...",
+        text: "Add minimum one",
+      });
     }
-    if (quantity > food.quantity) {
-      return alert(`only available${food.quantity}`);
+    if (foodQuantity > food.quantity) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: `You can not add more then ${food.quantity}`,
+      });
     }
 
     const purchaseData = {
       foodName,
       price,
-      quantity,
+      foodQuantity,
       buyerName,
       buyerEmail,
       buyingDate,
@@ -41,9 +54,15 @@ const BuyFood = () => {
       madeBy,
     };
 
-    //   const quantity=parseInt(food.quantity-Fromquantity)
-    //  const updatedQuantity={quantity}
-    //  console.log(updatedQuantity)
+    const quantity = parseInt(food.quantity - foodQuantity);
+    const newQuantity = { quantity };
+    console.log(quantity);
+    axios
+      .patch(
+        `https://assignment-11-server-eight-phi.vercel.app/home/${food._id}`,
+        newQuantity
+      )
+      .then((res) => console.log(res.data));
     fetch(`https://assignment-11-server-eight-phi.vercel.app/buy`, {
       method: "POST",
       headers: {
@@ -62,7 +81,7 @@ const BuyFood = () => {
   };
   return (
     <div className="bg-black flex justify-center h-[100vh] items-center w-full">
-      <div className="bg-[#191919] ">
+      <div className="bg-[#191919] " data-aos="zoom-in" data-aos-duration="500">
         <div className="mt-8 p-8 w-[500px] rounded-lg shadow-lg">
           <h2 className="text-2xl font-bold mb-4 text-white">
             Food Purchase Form

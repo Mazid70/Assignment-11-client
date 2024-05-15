@@ -63,7 +63,7 @@ axios.get(url,{ withCredentials:'true' }).then(res=>setOrderData(res.data))
                 </td>
                 <td className=" text-center text-lg ">{e.foodName}</td>
                 <td className=" text-center text-lg ">
-                  {e.price} x {e.quantity}
+                  {e.price} x {e.foodQuantity}
                 </td>
                 <td className=" text-center text-lg ">{e.buyingDate}</td>
                 <td className=" text-center text-lg ">{e.madeBy}</td>

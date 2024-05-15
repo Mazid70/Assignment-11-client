@@ -11,7 +11,7 @@ const Details = () => {
     madeBy,
     foodOrigin,
     description,
-    quantity
+    quantity,
   } = food;
   return (
     <section className="flex h-[100vh] justify-center items-center bg-black text-white">
@@ -20,9 +20,17 @@ const Details = () => {
         alt=""
         className="absolute left-0 bottom-0 opacity-10"
       />
-      <div className="bg-[#191919]  flex p-10 gap-10"  data-aos="zoom-in" data-aos-duration="500">
-        <div className="shadow-xl bg-red-500 -ml-20"data-aos="fade-right" data-aos-delay="500">
-          <img className="h-[300px] w-300px" src={foodImage} alt=""  / >
+      <div
+        className="bg-[#191919]  flex p-10 gap-10"
+        data-aos="zoom-in"
+        data-aos-duration="500"
+      >
+        <div
+          className="shadow-xl bg-red-500 -ml-20"
+          data-aos="fade-right"
+          data-aos-delay="500"
+        >
+          <img className="h-[300px] w-300px" src={foodImage} alt="" />
           <div className="bg-white p-5 text-black">
             <h1 className="text-lg font-medium ">Made By: {madeBy}</h1>
           </div>
@@ -35,9 +43,11 @@ const Details = () => {
           <h1 className="font-bold text-3xl text-red-500 mt-5">{price}</h1>
 
           <h1 className="font-semibold text-lg">Food Origin: {foodOrigin}</h1>
-         <Link to={`/buy/${_id}`} ><button className="bg-red-500 text-lg font-semibold px-5 py-2 rounded-xl mt-5">
-            Buy Now{" "}
-          </button></Link>
+          <Link to={`/buy/${_id}`}>
+            <button className="bg-red-500 text-lg font-semibold px-5 py-2 rounded-xl mt-5">
+              Buy Now{" "}
+            </button>
+          </Link>
         </div>
       </div>
     </section>

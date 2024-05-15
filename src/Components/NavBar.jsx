@@ -93,8 +93,8 @@ const NavBar = () => {
               {Link}
             </ul>
           </div>
-          <div className="flex justify-center items-center">
-            <img src="" alt="logo" className="" />
+          <div className="flex justify-center items-center gap-4">
+            <img src="logo.png" alt="logo" className="h-10 w-10" />
             <h1 className="font-bold text-2xl text-white">TableMingle</h1>
           </div>
         </div>
@@ -132,7 +132,7 @@ const NavBar = () => {
                       className="tooltip tooltip-left  flex items-center justify-center w-14 h-14 rounded-full bg-white ml-5 cursor-pointer"
                       data-tip="Click to view Profile"
                     >
-                      <img src={user?.photoURL} className="h-full w-full" />
+                      <img src={user?.photoURL} className="h-full w-full rounded-full" />
                     </div>
                   </label>
                 </div>

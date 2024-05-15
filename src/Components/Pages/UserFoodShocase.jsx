@@ -1,4 +1,3 @@
-
 import { GrUpdate } from "react-icons/gr";
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
@@ -9,12 +8,14 @@ import { FaUser, FaClock } from "react-icons/fa";
 import Swal from "sweetalert2";
 import axios from "axios";
 const UserFoodShocase = () => {
-    const { user } = useContext(AuthContext);
-  const url= `https://assignment-11-server-eight-phi.vercel.app/userfood/${user?.email}`
-  const [foods,setFoods]=useState([]);
-  useEffect(()=>{
-    axios.get(url,{ withCredentials:'true'}).then(res=>setFoods(res.data))
-     },[url])
+  const { user } = useContext(AuthContext);
+  const url = `https://assignment-11-server-eight-phi.vercel.app/userfood/${user?.email}`;
+  const [foods, setFoods] = useState([]);
+  useEffect(() => {
+    axios
+      .get(url, { withCredentials: "true" })
+      .then((res) => setFoods(res.data));
+  }, [url]);
 
   const handleUpdate = (e) => {
     e.preventDefault();
@@ -41,13 +42,16 @@ const UserFoodShocase = () => {
       foodDescription,
     };
     console.log(formData);
-    fetch(`https://assignment-11-server-eight-phi.vercel.app/userfood/${user.email}/${formid}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-      },
-      body: JSON.stringify(formData),
-    })
+    fetch(
+      `https://assignment-11-server-eight-phi.vercel.app/userfood/${user.email}/${formid}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      }
+    )
       .then((res) => res.json())
       .then(() => {
         Swal.fire({

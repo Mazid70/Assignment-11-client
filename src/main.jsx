@@ -15,6 +15,7 @@ import OrderFood from "./Components/Pages/OrderFood.jsx";
 import UserAddFood from "./Components/Pages/UserAddFood.jsx";
 import UserFoodShocase from "./Components/Pages/UserFoodShocase.jsx";
 import Error from "./Components/Pages/Error.jsx";
+import PrivateRoute from "./Components/Pages/PrivateRoute.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -39,15 +40,15 @@ const router = createBrowserRouter([
       },
       {
         path: "/addfood",
-        element: <UserAddFood></UserAddFood>,
+        element: <PrivateRoute><UserAddFood></UserAddFood></PrivateRoute>,
       },
       {
         path: "/myfood/user/:email",
-        element: <UserFoodShocase></UserFoodShocase>,
+        element:<PrivateRoute><UserFoodShocase></UserFoodShocase></PrivateRoute> ,
       },
       {
         path: "/myorder/user/:email",
-        element: <OrderFood></OrderFood>,
+        element: <PrivateRoute><OrderFood></OrderFood></PrivateRoute>,
       },
       {
         path: "/gallery",
@@ -56,12 +57,12 @@ const router = createBrowserRouter([
       },
       {
         path: "/details/:id",
-        element: <Details></Details>,
+        element: <PrivateRoute><Details /></PrivateRoute>,
         loader:({params})=>fetch(`https://assignment-11-server-eight-phi.vercel.app/home/${params.id}`)
       },
       {
         path: "/buy/:id",
-        element: <BuyFood></BuyFood>,
+        element: <PrivateRoute><BuyFood></BuyFood></PrivateRoute>,
         loader:({params})=>fetch(`https://assignment-11-server-eight-phi.vercel.app/home/${params.id}`)
       },
     ],
