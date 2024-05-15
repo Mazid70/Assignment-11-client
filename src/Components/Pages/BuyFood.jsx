@@ -22,21 +22,21 @@ const BuyFood = () => {
     const buyingDate = form.buyingDate.value;
 
     if (food.quantity === 0) {
-      Swal.fire({
+     return Swal.fire({
         icon: "error",
         title: "Oops...",
         text: "This food is not available",
       });
     }
     if (foodQuantity < 1) {
-      Swal.fire({
+    return  Swal.fire({
         icon: "alert",
         title: "Oops...",
         text: "Add minimum one",
       });
     }
     if (foodQuantity > food.quantity) {
-      Swal.fire({
+     return Swal.fire({
         icon: "error",
         title: "Oops...",
         text: `You can not add more then ${food.quantity}`,
