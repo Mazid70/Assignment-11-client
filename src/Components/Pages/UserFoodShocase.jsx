@@ -1,15 +1,21 @@
-import { useLoaderData } from "react-router-dom";
+
 import { GrUpdate } from "react-icons/gr";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { RiMoneyDollarCircleFill } from "react-icons/ri";
 import { IoFastFood } from "react-icons/io5";
 import { MdOutlineProductionQuantityLimits, MdEmail } from "react-icons/md";
 import { FaUser, FaClock } from "react-icons/fa";
 import Swal from "sweetalert2";
+import axios from "axios";
 const UserFoodShocase = () => {
-  const foods = useLoaderData();
-  const { user } = useContext(AuthContext);
+    const { user } = useContext(AuthContext);
+  const url= `https://assignment-11-server-eight-phi.vercel.app/userfood/${user?.email}`
+  const [foods,setFoods]=useState([]);
+  useEffect(()=>{
+    axios.get(url,{ withCredentials:'true'}).then(res=>setFoods(res.data))
+     },[url])
+
   const handleUpdate = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -35,7 +41,7 @@ const UserFoodShocase = () => {
       foodDescription,
     };
     console.log(formData);
-    fetch(`http://localhost:1000/userfood/${user.email}/${formid}`, {
+    fetch(`https://assignment-11-server-eight-phi.vercel.app/userfood/${user.email}/${formid}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

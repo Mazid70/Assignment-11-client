@@ -18,7 +18,7 @@ const Gallery = () => {
     const galleryItems = { name, comments, photo };
     console.log(galleryItems);
     setGallaeryData([...galleryData, galleryItems]);
-    fetch("http://localhost:1000/gallery", {
+    fetch("https://assignment-11-server-eight-phi.vercel.app/gallery", {
       method: "POST",
       headers: {
         "content-type": "application/json",

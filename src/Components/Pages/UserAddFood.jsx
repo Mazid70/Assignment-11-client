@@ -1,19 +1,13 @@
-import { useContext, useEffect } from "react";
+import { useContext} from "react";
 import { AuthContext } from "../../Provider/AuthProvider";
 import { RiMoneyDollarCircleFill } from "react-icons/ri";
 import { IoFastFood } from "react-icons/io5";
 import { MdOutlineProductionQuantityLimits, MdEmail } from "react-icons/md";
 import { FaUser, FaClock } from "react-icons/fa";
 import Swal from "sweetalert2";
-import { useNavigate } from "react-router-dom";
-
-
 const UserAddFood = () => {
- 
-  const { user } = useContext(AuthContext);
-
-
-  const handleSubmit = (e) => {
+const { user } = useContext(AuthContext);
+const handleSubmit = (e) => {
     e.preventDefault()
     const form=e.target;
     const foodImage= form.imglink.value;
@@ -37,7 +31,7 @@ const formData = {
     foodDescription
   }
   console.log(formData)
-  fetch(`http://localhost:1000/userfood`, {
+  fetch(`https://assignment-11-server-eight-phi.vercel.app/userfood`, {
     method: "POST",
     headers: {
       "content-type": "application/json",

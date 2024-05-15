@@ -6,7 +6,7 @@ const AllFoods = () => {
     const [search ,setSearch]=useState('')
     const[foods,setFoods]=useState([])
     useEffect(()=>{
-        fetch(`http://localhost:1000/allfoods?search=${search}`)
+        fetch(`https://assignment-11-server-eight-phi.vercel.app/allfoods?search=${search}`)
         .then(res=>res.json())
         .then(data=>setFoods(data))
         

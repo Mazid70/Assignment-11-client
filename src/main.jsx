@@ -14,9 +14,11 @@ import BuyFood from "./Components/Pages/BuyFood.jsx";
 import OrderFood from "./Components/Pages/OrderFood.jsx";
 import UserAddFood from "./Components/Pages/UserAddFood.jsx";
 import UserFoodShocase from "./Components/Pages/UserFoodShocase.jsx";
+import Error from "./Components/Pages/Error.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
+    errorElement:<Error></Error>,
     element: <Root></Root>,
     children: [
       {
@@ -42,27 +44,25 @@ const router = createBrowserRouter([
       {
         path: "/myfood/user/:email",
         element: <UserFoodShocase></UserFoodShocase>,
-        loader:({params})=>fetch(`http://localhost:1000/userfood/${params.email}`)
       },
       {
         path: "/myorder/user/:email",
         element: <OrderFood></OrderFood>,
-        loader:({params})=>fetch(`http://localhost:1000/buy/${params.email}`)
       },
       {
         path: "/gallery",
         element: <Gallery></Gallery>,
-        loader:()=>fetch('http://localhost:1000/gallery')
+        loader:()=>fetch('https://assignment-11-server-eight-phi.vercel.app/gallery')
       },
       {
         path: "/details/:id",
         element: <Details></Details>,
-        loader:({params})=>fetch(`http://localhost:1000/home/${params.id}`)
+        loader:({params})=>fetch(`https://assignment-11-server-eight-phi.vercel.app/home/${params.id}`)
       },
       {
         path: "/buy/:id",
         element: <BuyFood></BuyFood>,
-        loader:({params})=>fetch(`http://localhost:1000/home/${params.id}`)
+        loader:({params})=>fetch(`https://assignment-11-server-eight-phi.vercel.app/home/${params.id}`)
       },
     ],
   },

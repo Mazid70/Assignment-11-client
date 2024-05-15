@@ -1,9 +1,16 @@
+import { useContext, useEffect } from "react";
 import { useState } from "react";
-import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../Provider/AuthProvider";
+import axios from "axios";
 const OrderFood = () => {
-  const data = useLoaderData();
-  const [orderData, setOrderData] = useState(data);
+ 
+  const {user}=useContext(AuthContext)
+  const [orderData, setOrderData] = useState([]);
+ const url= `https://assignment-11-server-eight-phi.vercel.app/buy/${user?.email}`
+ useEffect(()=>{
+axios.get(url,{ withCredentials:'true' }).then(res=>setOrderData(res.data))
+ },[url])
   const handleDelete = (buyerEmail, _id) => {
     Swal.fire({
       title: "Are you sure?",
@@ -15,7 +22,7 @@ const OrderFood = () => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:1000/buy/${buyerEmail}/${_id}`, {
+        fetch(`https://assignment-11-server-eight-phi.vercel.app/buy/${buyerEmail}/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

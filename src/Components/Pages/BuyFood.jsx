@@ -44,7 +44,7 @@ const BuyFood = () => {
     //   const quantity=parseInt(food.quantity-Fromquantity)
     //  const updatedQuantity={quantity}
     //  console.log(updatedQuantity)
-    fetch(`http://localhost:1000/buy`, {
+    fetch(`https://assignment-11-server-eight-phi.vercel.app/buy`, {
       method: "POST",
       headers: {
         "content-type": "application/json",
