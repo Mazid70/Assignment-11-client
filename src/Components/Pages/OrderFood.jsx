@@ -42,35 +42,35 @@ axios.get(url,{ withCredentials:'true' }).then(res=>setOrderData(res.data))
   };
   console.log(orderData);
   return (
-    <div className="bg-black pt-20 min-h-[100vh]">
-      <div className="container mx-auto bg-[#191919] p-10">
-        <table className="w-full text-white  ">
+    <div className="bg-black pt-20 min-h-[100vh] w-full">
+      <div className="container mx-auto bg-[#191919]  md:p-10 lg:p-10">
+        <table className="w-screen lg:w-full md:w-full text-white  ">
           <thead className="bg-red-500 border-b-2">
             <tr className="">
-              <th className="p-5 text-xl">Food Img</th>
-              <th className="p-5 text-xl">Food Name</th>
-              <th className="p-5 text-xl">Food Price</th>
-              <th className="p-5 text-xl">Added Time</th>
-              <th className="p-5 text-xl">UserName</th>
-              <th className="p-5 text-xl"> </th>
+              <th className=" lg:p-5 md:p-5 text-xs md:text-xl lg:text-xl">Food Img</th>
+              <th className=" lg:p-5 md:p-5 text-xs md:text-xl lg:text-xl">Food Name</th>
+              <th className=" lg:p-5 md:p-5 text-xs md:text-xl lg:text-xl">Food Price</th>
+              <th className=" lg:p-5 md:p-5 text-xs md:text-xl lg:text-xl">Added Time</th>
+              <th className=" lg:p-5 md:p-5 text-xs md:text-xl lg:text-xl">UserName</th>
+              <th className=" lg:p-5 md:p-5 text-xs md:text-xl lg:text-xl"> </th>
             </tr>
           </thead>
           <tbody>
             {orderData.map((e) => (
               <tr key={e._id} className="border-b-2">
-                <td className=" flex justify-center text-lg ">
-                  <img src={e.foodImage} className="h-20 w-20" />
+                <td className=" flex justify-center items-center text-lg ">
+                  <img src={e.foodImage} className="h-10 w-10 md:h-20 md:w-20 lg:h-20 lg:w-20" />
                 </td>
-                <td className=" text-center text-lg ">{e.foodName}</td>
-                <td className=" text-center text-lg ">
+                <td className=" text-center text-xs md:text-lg lg:text-lg ">{e.foodName}</td>
+                <td className=" text-center text-xs md:text-lg lg:text-lg ">
                   {e.price} x {e.foodQuantity}
                 </td>
-                <td className=" text-center text-lg ">{e.buyingDate}</td>
-                <td className=" text-center text-lg ">{e.madeBy}</td>
-                <td className=" text-center text-lg ">
+                <td className=" text-center text-xs md:text-lg lg:text-lg ">{e.buyingDate}</td>
+                <td className=" text-center text-xs md:text-lg lg:text-lg ">{e.madeBy}</td>
+                <td className=" text-center text-xs md:text-lg lg:text-lg ">
                   <button
                     onClick={() => handleDelete(e.buyerEmail, e._id)}
-                    className="h-8 w-8 bg-red-500 rounded-full font-bold text-white"
+                    className="md:h-7 md:w-7 lg:h-8 lg:w-8 bg-red-500 rounded-full font-bold text-white"
                   >
                     ✕
                   </button>

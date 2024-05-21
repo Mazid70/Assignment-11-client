@@ -7,13 +7,13 @@ import { FaClock, FaLocationArrow, FaPhoneAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 const Banner = () => {
   return (
-    <section className=" bg-[#000002] h-[120vh] lg:h-[80vh] relative mt-16 lg:mt-0">
+    <section className="bg-[#000002] h-[120vh] md:h-[60vh] lg:h-[80vh] relative ">
       <div className=" bg-[url(https://www.transparentpng.com/download/food/24BoOY-food-fruits-free-cut-out.png)] opacity-25 bg-no-repeat bg-right-top h-full">
         {/* container  */}
       </div>
       <div className="container mx-auto">
-        <div className="flex  flex-col lg:flex-row h-full  mx-auto items-center lg:gap-40 absolute top-0 p-10 lg:p-0">
-          <div className="h-full flex flex-col justify-center lg:w-[55%] gap-8">
+        <div className="flex  flex-col md:flex-row lg:flex-row h-full  mx-auto items-center lg:gap-40 absolute top-0 p-10 lg:p-0">
+          <div className="h-full flex flex-col justify-center lg:w-[55%] md:w-[70%] gap-8">
             <h1
               className="text-3xl lg:text-5xl text-white font-bold "
               data-aos="fade-right"
@@ -99,7 +99,7 @@ const Banner = () => {
               <span className="absolute inset-0 border-2 border-[#E04444] rounded-full"></span>
             </Link>
           </div>
-          <div className="lg:w-[30%]">
+          <div className="lg:w-[30%] md:w-[35%]">
             <img
               src="burger.png"
               alt=""

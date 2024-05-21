@@ -13,11 +13,11 @@ const BestSell = () => {
       <h1
         className="text-3xl lg:text-5xl  font-bold mb-5"
         data-aos="fade-down"
-        data-aos-delay="1100"
+        data-aos-delay="500"
       >
         Best Sellers <span className="text-red-500">Showcase </span>
       </h1>
-      <p className="lg:w-[60%]" data-aos="fade-up" data-aos-delay="1200">
+      <p className="lg:w-[60%]" data-aos="fade-up" data-aos-delay="600">
         Discover our curated selection of best-selling dishes that have captured
         the hearts and palates of our patrons. From savory classics to indulgent
         desserts, these culinary delights are sure to tantalize your taste buds
@@ -26,9 +26,9 @@ const BestSell = () => {
         crafted by our talented chefs.
       </p>
       <div
-        className="grid grid-cols-2  md:grid-cols-3 lg:grid-cols-6 gap-2 lg:gap-5 mt-10"
+        className="grid   md:grid-cols-3 lg:grid-cols-6 gap-2 lg:gap-5 mt-10"
         data-aos="fade-down"
-        data-aos-duration="500"
+        data-aos-delay="700"
       >
         {foods.map((food) => (
           <FoodCard key={food._id} food={food}></FoodCard>

@@ -5,7 +5,7 @@ import FastestDelivery from "./FastestDelivery";
 
 const Home = () => {
   return (
-    <div className="bg-black">
+    <div className="bg-black pt-20 overflow-x-hidden">
       <Banner></Banner>
       <BestSell></BestSell>
       <FastestDelivery></FastestDelivery>

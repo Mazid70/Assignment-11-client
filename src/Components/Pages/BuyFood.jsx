@@ -80,9 +80,9 @@ const BuyFood = () => {
       });
   };
   return (
-    <div className="bg-black flex justify-center h-[100vh] items-center w-full">
+    <div className="bg-black flex justify-center min-h-[100vh] items-center w-full">
       <div className="bg-[#191919] " data-aos="zoom-in" data-aos-duration="500">
-        <div className="mt-8 p-8 w-[500px] rounded-lg shadow-lg">
+        <div className="mt-8  p-8 md:w-[500px]  lg:w-[500px]  w-screen rounded-lg shadow-lg">
           <h2 className="text-2xl font-bold mb-4 text-white">
             Food Purchase Form
           </h2>

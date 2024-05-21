@@ -10,7 +10,7 @@ const Contact = () => {
         <div
           className="flex-1 h-full space-y-4 "
           data-aos="fade-right"
-          data-aos-delay="500"
+          data-aos-delay="1200"
         >
           <div className="flex gap-5 ">
             <div className="flex-1">
@@ -90,7 +90,7 @@ const Contact = () => {
             <div
               className="flex flex-col justify-center items-center gap-1"
               data-aos="fade-up"
-              data-aos-delay="800"
+              data-aos-delay="1300"
             >
               <FaPhoneAlt className="text-[#E04444] text-2xl" />
               <h1 className="font-medium text-lg text-white">+880 567894343</h1>

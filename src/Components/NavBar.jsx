@@ -66,7 +66,7 @@ const NavBar = () => {
   );
 
   return (
-    <nav className="bg-black lg:bg-transparent w-full z-10 fixed backdrop-blur-lg top-0">
+    <nav className="bg-black bg-opacity-25 w-full z-10 fixed top-0">
       <div className="navbar mx-auto container">
         <div className="navbar-start">
           <div className="dropdown text-white">
@@ -94,8 +94,8 @@ const NavBar = () => {
             </ul>
           </div>
           <div className="flex justify-center items-center gap-4">
-            <img src="logo.png" alt="logo" className="h-10 w-10" />
-            <h1 className="font-bold text-2xl text-white">TableMingle</h1>
+            <img src="logo.png" alt="logo" className="lg:h-10 h-7 lg:w-10" />
+            <h1 className="font-bold lg:text-2xl text-white">TableMingle</h1>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
@@ -105,13 +105,13 @@ const NavBar = () => {
           {user ? (
             <div
               onClick={handleSignOut}
-              className="flex cursor-pointer bg-[#191919] rounded-full px-3 py-2 text-white items-center gap-3 font-bold text-lg  "
+              className="flex cursor-pointer bg-[#191919] rounded-full px-3 py-2 text-white items-center gap-3 font-bold text-xs md:text-lg lg:text-lg  "
             >
               <MdLogout /> Sign out
             </div>
           ) : (
             <NavLink to="/signin">
-              <div className="flex cursor-pointer bg-[#191919] rounded-full px-3 py-2 text-white items-center gap-3 font-bold text-lg  ">
+              <div className="flex cursor-pointer bg-[#191919] rounded-full px-3 py-2 text-white items-center gap-3 font-bold text-xs md:text-lg  lg:text-lg  ">
                 <MdLogin /> Sign In
               </div>
             </NavLink>
@@ -129,7 +129,7 @@ const NavBar = () => {
                   {/* Page content here */}
                   <label htmlFor="my-drawer-4" className="drawer-button ">
                     <div
-                      className="tooltip tooltip-left  flex items-center justify-center w-14 h-14 rounded-full bg-white ml-5 cursor-pointer"
+                      className="tooltip tooltip-left  flex items-center justify-center h-8  md:w-14 md:h-14 lg:w-14 lg:h-14 rounded-full bg-white ml-5 cursor-pointer"
                       data-tip="Click to view Profile"
                     >
                       <img src={user?.photoURL} className="h-full w-full rounded-full" />

@@ -5,8 +5,10 @@ import { IoFastFood } from "react-icons/io5";
 import { MdOutlineProductionQuantityLimits, MdEmail } from "react-icons/md";
 import { FaUser, FaClock } from "react-icons/fa";
 import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
 const UserAddFood = () => {
   const { user } = useContext(AuthContext);
+  const navigate=useNavigate()
   const handleSubmit = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -40,6 +42,7 @@ const UserAddFood = () => {
     })
       .then((res) => res.json())
       .then(() => {
+        navigate(`/myfood/user/${userEmail}`)
         Swal.fire({
           title: "Good job!",
           text: "Food Added Successfully ",
@@ -50,7 +53,7 @@ const UserAddFood = () => {
   return (
     <div className="bg-black min-h-[100vh] pt-20 flex justify-center items-center">
       <div className="bg-[#191919] " data-aos="zoom-in" data-aos-duration="500">
-        <div className="mt-8 p-8 w-[600px] rounded-lg shadow-lg pt-4">
+        <div className="mt-8 p-8 w-screen md:w-[600px] lg:w-[600px] rounded-lg shadow-lg pt-4">
           <h2 className="text-2xl font-bold mb-4 text-white text-center">
             Add New <span className="text-red-500">Food</span>
           </h2>
@@ -68,7 +71,7 @@ const UserAddFood = () => {
               />
               <IoFastFood className="absolute text-lg  top-9 left-2" />
             </div>
-            <div className="flex gap-2">
+            <div className="flex flex-col md:flex-row lg:flex-row gap-2">
               <div className="relative flex-1">
                 <label htmlFor="name" className="block font-medium text-white">
                   Food Name
@@ -99,7 +102,7 @@ const UserAddFood = () => {
                 <IoFastFood className="absolute text-lg  top-9 left-2" />
               </div>
             </div>
-            <div className="flex gap-2">
+            <div className="flex flex-col md:flex-row lg:flex-row gap-2">
               <div className="relative flex-1">
                 <label
                   htmlFor="quantity"
@@ -133,7 +136,7 @@ const UserAddFood = () => {
                 <RiMoneyDollarCircleFill className="absolute text-lg  top-9 left-2" />
               </div>
             </div>
-            <div className="flex gap-2">
+            <div className="flex flex-col md:flex-row lg:flex-row gap-2">
               <div className="relative flex-1">
                 <label
                   htmlFor="origin"

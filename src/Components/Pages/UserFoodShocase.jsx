@@ -63,34 +63,34 @@ const UserFoodShocase = () => {
   };
   return (
     <div className="bg-black pt-20 min-h-[100vh]">
-      <div className="container mx-auto bg-[#191919] p-10">
-        <table className="w-full text-white  ">
+      <div className="container mx-auto bg-[#191919]  md:p-10 lg:p-10">
+        <table className="w-screen md:w-full lg:w-full text-white  ">
           <thead className="bg-red-500 border-b-2">
             <tr className="">
-              <th className="p-5 text-xl">Food Img</th>
-              <th className="p-5 text-xl">Food Name</th>
-              <th className="p-5 text-xl">Food Price</th>
-              <th className="p-5 text-xl">Quantitiy</th>
-              <th className="p-5 text-xl">Food Category</th>
-              <th className="p-5 text-xl"> </th>
+              <th className=" md:p-5 lg:p-5 text-xs md:text-xl lg:text-xl">Food Img</th>
+              <th className=" md:p-5 lg:p-5 text-xs md:text-xl lg:text-xl">Food Name</th>
+              <th className=" md:p-5 lg:p-5 text-xs md:text-xl lg:text-xl">Food Price</th>
+              <th className=" md:p-5 lg:p-5 text-xs md:text-xl lg:text-xl">Quantitiy</th>
+              <th className=" md:p-5 lg:p-5 text-xs md:text-xl lg:text-xl">Food Category</th>
+              <th className=" md:p-5 lg:p-5 text-xs md:text-xl lg:text-xl"> </th>
             </tr>
           </thead>
           <tbody>
             {foods.map((e) => (
               <tr key={e._id} className="border-b-2">
-                <td className=" flex justify-center text-lg ">
-                  <img src={e.foodImage} className="h-20 w-20" />
+                <td className=" flex justify-center text-lg items-center">
+                  <img src={e.foodImage} className="h-10 w-10 md:h-20 lg:h-20 md:w-20 lg:w-20" />
                 </td>
-                <td className=" text-center text-lg ">{e.foodName}</td>
-                <td className=" text-center text-lg ">{e.price}</td>
-                <td className=" text-center text-lg ">{e.quantity}</td>
-                <td className=" text-center text-lg ">{e.foodCategory}</td>
-                <td className=" text-center text-lg ">
+                <td className=" text-center text-xs md:text-lg lg:text-lg ">{e.foodName}</td>
+                <td className=" text-center text-xs md:text-lg lg:text-lg ">{e.price}</td>
+                <td className=" text-center text-xs md:text-lg lg:text-lg ">{e.quantity}</td>
+                <td className=" text-center text-xs md:text-lg lg:text-lg ">{e.foodCategory}</td>
+                <td className=" text-center text-xs md:text-lg lg:text-lg ">
                   <button
                     onClick={() =>
                       document.getElementById("my_modal_3").showModal()
                     }
-                    className="flex items-center justify-center h-8 w-8 bg-red-500 rounded-full font-bold text-white"
+                    className="flex items-center justify-center md:h-7 md:w-7 lg:h-8 lg:w-8 bg-red-500 rounded-full font-bold text-white"
                   >
                     <GrUpdate />
                   </button>

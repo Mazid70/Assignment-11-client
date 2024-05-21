@@ -14,23 +14,23 @@ const Details = () => {
     quantity,
   } = food;
   return (
-    <section className="flex h-[100vh] justify-center items-center bg-black text-white">
+    <section className="pt-20 flex min-h-[100vh]  justify-center items-center bg-black text-white">
       <img
         src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/dcaf1af5-3162-42f2-a863-b4ce4d9d11ec/dd3d416-326cc8e4-ec52-451f-bcd2-5fba96dea4b3.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2RjYWYxYWY1LTMxNjItNDJmMi1hODYzLWI0Y2U0ZDlkMTFlY1wvZGQzZDQxNi0zMjZjYzhlNC1lYzUyLTQ1MWYtYmNkMi01ZmJhOTZkZWE0YjMucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.1t57IcCD5NWJ8yUKn4Q1iAwvJTa5g8-jvhicNz9R6fQ"
         alt=""
         className="absolute left-0 bottom-0 opacity-10"
       />
       <div
-        className="bg-[#191919]  flex p-10 gap-10"
+        className="bg-[#191919]  flex flex-col md:flex-row lg:flex-row p-10 gap-10"
         data-aos="zoom-in"
         data-aos-duration="500"
       >
         <div
-          className="shadow-xl bg-red-500 -ml-20"
+          className="shadow-xl bg-red-500 lg:-ml-20"
           data-aos="fade-right"
           data-aos-delay="500"
         >
-          <img className="h-[300px] w-300px" src={foodImage} alt="" />
+          <img className="lg:h-[300px] lg:w-300px" src={foodImage} alt="" />
           <div className="bg-white p-5 text-black">
             <h1 className="text-lg font-medium ">Made By: {madeBy}</h1>
           </div>

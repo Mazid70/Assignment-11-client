@@ -18,7 +18,7 @@ const AllFoods = () => {
     setSearch(value);
   };
   return (
-    <div className="bg-black min-h-[100vh]">
+    <div className="bg-black min-h-[100vh] w-full overflow-x-hidden">
       <section className=" container text-center mx-auto text-white py-20">
         <h1
           className="text-3xl lg:text-5xl  font-bold mb-5 "
@@ -60,7 +60,7 @@ const AllFoods = () => {
           </form>
         </div>
         <div
-          className="grid grid-cols-2  md:grid-cols-3 lg:grid-cols-6 gap-2 lg:gap-5 mt-10"
+          className="grid  md:grid-cols-3 lg:grid-cols-6 gap-2 lg:gap-5 mt-10"
           data-aos="fade-up"
           data-aos-delay="700"
         >
