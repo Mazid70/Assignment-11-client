@@ -19,3 +19,19 @@ Pakages:
 2.React Icons
 3.React lottie
 etc
+
+
+To get a local copy up and running follow these simple steps.
+
+### Prerequisites
+
+Make sure you have Node.js and npm (or yarn) installed on your local machine.
+
+- Node.js - [Download & Install Node.js](https://nodejs.org/)
+- npm (comes with Node.js) or yarn - [Download & Install yarn](https://yarnpkg.com/)
+
+### Installation
+
+1. Clone the repository
+   ```sh
+   git clone <repository_url>
